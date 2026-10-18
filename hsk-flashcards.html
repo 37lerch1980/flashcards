@@ -672,6 +672,13 @@
     return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
 
+  // register service worker for offline use
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    });
+  }
+
   // init
   setActiveSeg(document.getElementById('levelSeg'), settings.level);
   setActiveSeg(document.getElementById('modeSeg'), settings.mode);
