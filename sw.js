@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hsk-flashcards-v1';
+const CACHE_NAME = 'hsk-flashcards-v2';
 const FILE_TO_CACHE = 'hsk-flashcards.html';
 
 self.addEventListener('install', (event) => {
